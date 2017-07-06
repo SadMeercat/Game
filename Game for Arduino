@@ -24,6 +24,7 @@ void setup()
   pinMode(buttonDown, INPUT);
   pinMode(buttonSelect, INPUT);
   lcd.begin(16, 2);
+  lcd.print("Loading...");
 }
 
 void loop() {
@@ -44,14 +45,12 @@ void loop() {
     }
     if (MenuPos == 0) {
       lcd.clear();
-      delay(1000);
       lcd.print("Job");
       lcd.setCursor(0, 1);
-      lcd.print("-5H -5S -5F +100M");
+      lcd.print("-5H-5S-5F+100M");
     }
     if (MenuPos == 1) {
       lcd.clear();
-      delay(1000);
       lcd.print("eat");
       lcd.setCursor(0, 1);
       lcd.print("+2H+3S+10F-15M");
